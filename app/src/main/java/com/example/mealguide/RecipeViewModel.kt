@@ -9,20 +9,19 @@ class RecipeViewModel : ViewModel() {
     var recipes = mutableStateListOf<Recipe>()
         private set
     var ingredients = listOf("Ingredient")
-    lateinit var newRecipe : Recipe
+    lateinit var loadedRecipe : Recipe
         private set
 
-    fun LoadRecipes(){
+    fun loadRecipes(){
         for (i in 1..10){
-            newRecipe = Recipe("recipe$i", ingredients)
-            AddRecipe(newRecipe)
+            loadedRecipe = Recipe("recipe$i", ingredients)
+            addRecipe(loadedRecipe)
         }
     }
-
-    fun AddRecipe(recipe: Recipe){
+    fun addRecipe(recipe: Recipe){
         recipes.add(recipe)
     }
     init {
-        LoadRecipes()
+        loadRecipes()
     }
 }
