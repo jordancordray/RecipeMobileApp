@@ -115,7 +115,7 @@ fun Navigation(navController : NavHostController) {
     val recipeViewModel: RecipeViewModel = viewModel()
     NavHost(
         navController = navController,
-        startDestination = "shopping"
+        startDestination = "home"
     ) {
         composable("home") {
             HomeScreen( navController, dayViewModel)
